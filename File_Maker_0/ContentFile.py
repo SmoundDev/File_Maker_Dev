@@ -12,6 +12,7 @@ class File_Content:
 
             function getActualDate() {
                 // Date object
+                
                 const date = new Date();
 
                 let currentDay = String(date.getDate()).padStart(2, '0');
