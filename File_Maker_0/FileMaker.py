@@ -3,10 +3,15 @@ from ContentFile import File_Content as fc
 
 
 def crear_archivo(ruta_destino, nombre_archivo, extension_archivo):
+    
+
 
     _fileContent, _nombre_archivo = fc.ReturnContentByExtension(
         nombre_archivo, extension_archivo)
-
+    
+    if extension_archivo == 'partial':
+        extension_archivo = 'cshtml'
+        
     extension_archivo = '.'+extension_archivo
     ruta_completa = os.path.join(
         ruta_destino, _nombre_archivo+extension_archivo)
